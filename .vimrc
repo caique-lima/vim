@@ -30,3 +30,7 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "Ctrl + n to open NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+"Set color schema
+
+colorscheme phd
