@@ -35,3 +35,7 @@ map <C-n> :NERDTreeToggle<CR>
 "Set color schema
 
 colorscheme phd
+
+"Set colorcolumn 80
+
+set colorcolumn=80
