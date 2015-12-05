@@ -36,3 +36,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 colorscheme molokai
 highlight Comment cterm=bold
+
+"Set colorcolumn 80
+
+set colorcolumn=80
