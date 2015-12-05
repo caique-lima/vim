@@ -1,13 +1,16 @@
+rm -r -f ~/.vim/
+rm ~/.vimrc
+
 mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/colors
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 cd ~/.vim/bundle
 git clone https://github.com/scrooloose/nerdtree.git
 
-cd ~/.vim/bundle
 git clone git://github.com/tpope/vim-fugitive.git
 vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
-curl -LSso ~/.vim/colors/phd.vim https://raw.githubusercontent.com/vim-scripts/phd/master/colors/phd.vim
+wget https://raw.githubusercontent.com/fxdx/vim/master/.vimrc -P ~/
 
-curl -LSso ~/.vimrc https://raw.githubusercontent.com/fxdx/vim/master/.vimrc
+wget https://raw.githubusercontent.com/sentientmachine/Pretty-Vim-Python/master/colors/molokai.vim -P ~/.vim/colors/
+wget  https://raw.githubusercontent.com/sentientmachine/Pretty-Vim-Python/master/syntax/python.vim -P ~/.vim/syntax/

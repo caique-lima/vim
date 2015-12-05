@@ -34,4 +34,5 @@ map <C-n> :NERDTreeToggle<CR>
 
 "Set color schema
 
-colorscheme phd
+colorscheme molokai
+highlight Comment cterm=bold
