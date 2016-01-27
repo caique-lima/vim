@@ -10,7 +10,7 @@ git clone https://github.com/scrooloose/nerdtree.git
 git clone git://github.com/tpope/vim-fugitive.git
 vim -u NONE -c "helptags vim-fugitive/doc" -c q
 
-wget https://raw.githubusercontent.com/fxdx/vim/master/.vimrc -P ~/
+wget https://raw.githubusercontent.com/caique-lima/vim/master/.vimrc -P ~/
 
 wget https://raw.githubusercontent.com/sentientmachine/Pretty-Vim-Python/master/colors/molokai.vim -P ~/.vim/colors/
 wget  https://raw.githubusercontent.com/sentientmachine/Pretty-Vim-Python/master/syntax/python.vim -P ~/.vim/syntax/
