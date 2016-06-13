@@ -41,3 +41,11 @@ highlight Comment cterm=bold
 "Set colorcolumn 80
 
 set colorcolumn=80
+
+"Set highlight search
+
+set hlsearch
+
+"Highlight currentline
+
+set cursorline
