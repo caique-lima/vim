@@ -8,7 +8,8 @@ set nobackup
 set nowb
 set noswapfile
 
-set number	"Show line numbers
+set relativenumber
+
 set autoread "Reload files
 
 " Syntax highlighting
@@ -49,3 +50,8 @@ set hlsearch
 "Highlight currentline
 
 set cursorline
+hi CursorLine cterm=underline
+
+"Hightlight current column
+
+set cursorcolumn
