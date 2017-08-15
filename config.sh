@@ -14,3 +14,5 @@ wget https://raw.githubusercontent.com/caique-lima/vim/master/.vimrc -P ~/
 
 wget https://raw.githubusercontent.com/sentientmachine/Pretty-Vim-Python/master/colors/molokai.vim -P ~/.vim/colors/
 wget  https://raw.githubusercontent.com/sentientmachine/Pretty-Vim-Python/master/syntax/python.vim -P ~/.vim/syntax/
+
+mkdir -p ~/.vim/{ftdetect,indent,syntax} && for d in ftdetect indent syntax ; do wget -O ~/.vim/$d/scala.vim https://raw.githubusercontent.com/derekwyatt/vim-scala/master/$d/scala.vim; done
