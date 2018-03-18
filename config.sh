@@ -5,6 +5,7 @@ mkdir -p ~/.vim/autoload ~/.vim/bundle ~/.vim/colors
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 cd ~/.vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git
 git clone https://github.com/scrooloose/nerdtree.git
 
 git clone git://github.com/tpope/vim-fugitive.git
@@ -16,3 +17,13 @@ wget https://raw.githubusercontent.com/sentientmachine/Pretty-Vim-Python/master/
 wget  https://raw.githubusercontent.com/sentientmachine/Pretty-Vim-Python/master/syntax/python.vim -P ~/.vim/syntax/
 
 mkdir -p ~/.vim/{ftdetect,indent,syntax} && for d in ftdetect indent syntax ; do wget -O ~/.vim/$d/scala.vim https://raw.githubusercontent.com/derekwyatt/vim-scala/master/$d/scala.vim; done
+
+cd ~/
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
