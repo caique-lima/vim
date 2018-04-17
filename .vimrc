@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " ========================================
-" Plugins list 
+" Plugins list
 " ========================================
 "
 
@@ -24,6 +24,7 @@ call vundle#begin()
 
         Plugin 'tmhedberg/SimpylFold'
         Plugin 'nvie/vim-flake8'
+        Plugin 'Chiel92/vim-autoformat'
 
 "To install Pathogen plugins
 
@@ -71,9 +72,17 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     let g:SimpylFold_docstring_preview=1
     set foldlevel=99
 
-"Set color schema
-    colorscheme molokai
+"Set color schema"
+    color molokai
     highlight Comment cterm=bold
+
+    set background=dark
+
+    if has('termguicolors')
+      set termguicolors " 24-bit terminal
+    else
+      let g:synthwave_termcolors=256 " 256 color mode
+    endif
 
 " HIGHLIGHT
     "Set highlight search
@@ -104,5 +113,13 @@ let g:jedi#usages_command = "<Leader>n"
 let g:jedi#completions_command = "<C-Space>"
 let g:jedi#rename_command = "<Leader>r"
 
+let g:formatdef_scalafmt = "'scalafmt --stdin'"
+let g:formatters_scala = ['scalafmt']
+noremap <C-e> :Autoformat<CR>
+
+set lazyredraw
+
 call vundle#end()
 filetype plugin indent on
+
+autocmd BufWritePre * %s/\s\+$//e
