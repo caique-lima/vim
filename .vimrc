@@ -30,10 +30,6 @@ call vundle#begin()
 
 call pathogen#infect()
 
-" Use UTF-8 encoding
-
-set encoding=utf-8
-
 " Turn off swap, backup
 
 set nobackup
@@ -73,29 +69,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
     set foldlevel=99
 
 "Set color schema"
-    color molokai
+    color ron
     highlight Comment cterm=bold
 
     set background=dark
-
-    if has('termguicolors')
-      set termguicolors " 24-bit terminal
-    else
-      let g:synthwave_termcolors=256 " 256 color mode
-    endif
-
-" HIGHLIGHT
-    "Set highlight search
-    set hlsearch
-    "Hightlight current column
-    set cursorcolumn
-    "Highlight currentline
-    set cursorline
-    hi CursorLine cterm=underline
-    " Syntax highlighting
-    syntax on
-    set colorcolumn=79
-
 
 let python_highlight_all=1
 syntax on
@@ -122,4 +99,24 @@ set lazyredraw
 call vundle#end()
 filetype plugin indent on
 
+let NERDTreeShowHidden=1
+
 autocmd BufWritePre * %s/\s\+$//e
+
+" Use UTF-8 encoding
+set encoding=utf-8
+
+" HIGHLIGHT
+    "Set highlight search
+    set hlsearch
+    "Hightlight current column
+    set cursorcolumn
+    "Highlight currentline
+    set cursorline
+    hi CursorLine cterm=underline
+    "Highlight 79 col
+    set colorcolumn=79
+    hi ColorColumn ctermbg=DarkGrey
+    "Row number colors
+    hi LineNr term=bold ctermfg=DarkGrey
+    hi CursorLineNr term=bold ctermfg=LightGrey
