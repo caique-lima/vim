@@ -120,3 +120,6 @@ set encoding=utf-8
     "Row number colors
     hi LineNr term=bold ctermfg=DarkGrey
     hi CursorLineNr term=bold ctermfg=LightGrey
+
+" Buffers
+nnoremap gb :ls<CR>:b<Space>
