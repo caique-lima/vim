@@ -14,6 +14,7 @@ call vundle#begin()
     " Visuals
 
         Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+        Plugin 'junegunn/goyo.vim'
 
     " Search
 
