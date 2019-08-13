@@ -27,9 +27,14 @@ call vundle#begin()
         Plugin 'nvie/vim-flake8'
         Plugin 'Chiel92/vim-autoformat'
 
+    " Writing
+
+        Plugin 'xolox/vim-misc'
+        Plugin 'xolox/vim-notes'
+
 "To install Pathogen plugins
 
-call pathogen#infect()
+execute pathogen#infect()
 
 " Turn off swap, backup
 
@@ -124,3 +129,6 @@ set encoding=utf-8
 
 " Buffers
 nnoremap gb :ls<CR>:b<Space>
+
+" Notes
+let g:notes_directories = ['~/notes']
