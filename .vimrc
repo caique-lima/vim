@@ -132,3 +132,6 @@ nnoremap gb :ls<CR>:b<Space>
 
 " Notes
 let g:notes_directories = ['~/notes']
+
+" Folds
+set foldmethod=manual
